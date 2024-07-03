@@ -1,24 +1,14 @@
-let palavra;
 function setup() {
   createCanvas(400, 400);
-  palavra = palavraAleatoria ();
+  background(220);
 }
-function palavraAleatoria () {
- let palavras = ["Santos","Santástico","Sensacional"];
-  return random(palavras); 
-}
-function inicializaCores () {
-background("black");
-fill ("white");
-textSize (64);
-textAlign (CENTER,CENTER) 
-}
-function palavraParcial (minimo,maximo) {
- let quantidade = map (mouseX, minimo, maximo, 1, palavra.length);
-  let parcial = palavra.substring (0, quantidade);
-  return parcial;
-}
+
 function draw() {
-inicializaCores ()
-  let texto = palavraParcial (0,width);
-  text (texto, 200,200);
+  fill("rgb(0,50,255)");
+  stroke("black");
+  strokeWeight(5);
+  
+  if(mouseIsPressed){
+    rect(mouseX,mouseY,50,70);
+  }
+}
